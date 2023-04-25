@@ -32,3 +32,10 @@ Os tipos de código HTTP são:
 - 3xx: mensagens de redirecionamento
 - 4xx: respostas de erro do cliente
 - 5xx: respostas de erro do servidor
+
+
+## Streams
+
+O conceito de streams no Node.js é o de que devemos usar a informação (dados) conforme ela é lida ao invés de esperar a leitura completa. Por exemplo: ao invés de ler um arquivo CSV de 1GB por completo e só então salvar as informações no banco de dados, nós podemos salvar as informações conforme o arquivo é lido, ou seja, ao invés de esperar que as 1 milhão de linhas (valor fictício) sejam lidas para só então salvar no banco, nós salvamos os dados assim que as linhas forem lidas (se tivermos mil linhas sendo lidas por segundos essa será a quantidade de informações a serem salvas no banco por segundo).
+
+Também é importante lembrar que existem 2 tipos de streams, **readable streams** e **writable streams**. As readable streams são aquelas em que lemos os dados que estão sendo recebidos aos poucos, como é o exemplo da leitura de arquivo dado acima, enquanto as writable streams são aquelas em que enviamos os dados aos poucos, como por exemplo a Netflix e Spotify, que vão enviado os filmes e músicas para os usuários aos poucos.
