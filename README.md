@@ -14,10 +14,21 @@
 
 **Stateless**: Não salva nada na memória, apenas em dispositivos externos (database, arquivos de texto, etc). Tendo as informações salvas em memória ou não, a aplicação continuará funcionando da mesma forma.
 
-## O que é JSON
+## O que é JSON (JavaScript Object Notation)?
 
-**JSON (JavaScript Object Notation)**: Estrutura de dados muito utilizada na transição de informações entre back end e front end ou entre 2 back ends distintos. Se assemelha a como as estruturas de dados são no JavaScript, permitindo representar objetos, arrays, tipos de dados primitivos (string, boolean, int, etc.) tudo isso, dentro de uma string, facilitando a transição de dados de diferentes tipos entre diversas aplicações.
+Estrutura de dados muito utilizada na transição de informações entre back end e front end ou entre 2 back ends distintos. Se assemelha a como as estruturas de dados são no JavaScript, permitindo representar objetos, arrays, tipos de dados primitivos (string, boolean, int, etc.) tudo isso, dentro de uma string, facilitando a transição de dados de diferentes tipos entre diversas aplicações.
 
-## O que são HEADERS
+## O que são HEADERS (request/response)
 
-**HEADERS (request/response)**: São metadados, ou seja, são informações adicionais para que tanto o back end quanto o front end saibam como lidar com aquela requisição da melhor forma e que não tem relação com os dados retornados, mas sim com a forma como esses dados vindos do back end poderão ser interpretados pelo front end.
+São metadados, ou seja, são informações adicionais para que tanto o back end quanto o front end saibam como lidar com aquela requisição da melhor forma e que não tem relação com os dados retornados, mas sim com a forma como esses dados vindos do back end poderão ser interpretados pelo front end.
+
+## HTTP Status Code
+
+Após o cliente fazer uma requisição para alguma rota da aplicação o back end retorna um código numérico que informa ao front end se a mesma foi bem sucedida, bem como informa possíveis erros, como página não encontrada ou erro interno do servidor.
+
+Os tipos de código HTTP são:
+- 1xx: respostas informativas
+- 2xx: respostas de sucesso
+- 3xx: mensagens de redirecionamento
+- 4xx: respostas de erro do cliente
+- 5xx: respostas de erro do servidor
