@@ -18,6 +18,6 @@
 
 **JSON (JavaScript Object Notation)**: Estrutura de dados muito utilizada na transição de informações entre back end e front end ou entre 2 back ends distintos. Se assemelha a como as estruturas de dados são no JavaScript, permitindo representar objetos, arrays, tipos de dados primitivos (string, boolean, int, etc.) tudo isso, dentro de uma string, facilitando a transição de dados de diferentes tipos entre diversas aplicações.
 
-# O que são HEADERS
+## O que são HEADERS
 
 **HEADERS (request/response)**: São metadados, ou seja, são informações adicionais para que tanto o back end quanto o front end saibam como lidar com aquela requisição da melhor forma e que não tem relação com os dados retornados, mas sim com a forma como esses dados vindos do back end poderão ser interpretados pelo front end.
