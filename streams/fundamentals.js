@@ -1,6 +1,8 @@
-import { Readable } from 'node:stream'
+import { Readable, Transform, Writable } from 'node:stream'
 
-// How a stream in Node.js work under the hood
+// How streams work under the hood in Node.js
+
+// Readable Stream
 class OneToHundredStream extends Readable {
   index = 1
 
@@ -19,4 +21,23 @@ class OneToHundredStream extends Readable {
   }
 }
 
-new OneToHundredStream().pipe(process.stdout)
+// Transform Stream
+class InverseNumberStream extends Transform {
+  _transform(chunk, encoding, callback) {
+    const transformed = Number(chunk.toString()) * -1
+
+    callback(null, Buffer.from(String(transformed)))
+  }
+}
+
+// Writable Stream
+class MultiplyByTenStream extends Writable {
+  _write(chunk, encoding, callback) {
+    console.log(Number(chunk.toString()) * 10)
+    callback()
+  }
+}
+
+new OneToHundredStream()
+  .pipe(new InverseNumberStream())
+  .pipe(new MultiplyByTenStream())
